@@ -25,4 +25,10 @@ class Course < ApplicationRecord
         class_name: :Course,
         optional: true
 
+
+    belongs_to :instructor,
+        primary_key: :id,
+        foreign_key: :instructor_id,
+        class_name: :User
+
 end
